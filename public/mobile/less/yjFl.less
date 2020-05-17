@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+//一级分类
+
+.cate_le{
+  width: 90rem / @ltJz;
+  height: 100%;
+  position: relative;
+  float: left;
+  a{
+    display: block;
+    .mpWidth();
+    height: 50rem / @ltJz;
+    border: 1rem / @ltJz solid #cccccc;
+    border-left: none;
+    background: #f3f4f5;
+    text-align: center;
+    line-height: 50rem / @ltJz;
+  }
+  li{
+    &.yj_active{
+      a{
+        border: none;
+        background: @ltTextColor;
+        color: #ffa500;
+      }
+    }
+  }
+}

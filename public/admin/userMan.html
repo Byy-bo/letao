@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>后台管理系统--后台管理系统</title>
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/userMan.css">
+</head>
+<body>
+<div id="tog-modal-sm" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="toModalLabel">温馨提示</h4>
+            </div>
+            <div class="media-body">
+                <p class="text-danger">
+                    <span class="glyphicon glyphicon-info-sign"></span>
+                    您确定要<span class="ht_isText">禁用</span>当前用户吗？
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button id="ht_tog" type="button" class="btn btn-primary">确认</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--退出的模态框-->
+<div id="logOut-modal-sm" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">温馨提示</h4>
+            </div>
+            <div class="media-body">
+                <p class="text-danger">
+                    <span class="glyphicon glyphicon-info-sign"></span>
+                    您确定要退出后台管理系统吗？
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button id="ht_logOut" type="button" class="btn btn-primary">确认</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--整个大容器-->
+<div class="ht_box ht_index_box">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-2 ht_index_le">
+                <!--logo文字-->
+                <div class="ht_index_leTo">
+                    <p>ITCAST</p>
+                </div>
+                <!--左侧导航-->
+                <div class="ht_index_leBo">
+                    <div>
+                        <img src="./images/default.png" alt="">
+                        <span>超级管理员</span>
+                    </div>
+                    <ul>
+                        <li class="activeOne"><a href="userMan.html"><span class="glyphicon glyphicon-user"></span> 用户管理</a></li>
+                        <li>
+                            <a class="ht_flGl" href="javascirpt:;"><span class="glyphicon glyphicon-th-list"></span> 分类管理</a>
+                            <ul class="ht_inLeBo_hid">
+                                <li class=""><a href="first-category.html">一级分类</a></li>
+                                <li><a href="second-category.html">二级分类</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:;"><span class="glyphicon glyphicon-tag"></span> 商品管理</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xs-10 ht_index_ri">
+                <!--上半图标-->
+                <div class="ht_index_riTo">
+                    <a href="javascript:;" class="glyphicon glyphicon-align-justify ht_nav_flag"></a>
+                    <a  role="button" class="glyphicon glyphicon-log-out" data-toggle="modal" data-target="#logOut-modal-sm"></a>
+                </div>
+                <!--下半统计-->
+                <div class="ht_index_riBo">
+                    <ul class="ht_inRiBo_nav clearfix">
+                        <li><a href="javacript:;">管理系统</a></li>
+                        <li>/</li>
+                        <li><a href="javacript:;">首页</a></li>
+                    </ul>
+                    <div class="ht_adContent">
+                        <table class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>序号</th>
+                                    <th>用户名</th>
+                                    <th>手机号</th>
+                                    <th>状态</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody id="yhData">
+                            <!--TODO-->
+                                <!--<tr>-->
+                                    <!--<td>序号</td>-->
+                                    <!--<td>用户名</td>-->
+                                    <!--<td>手机号</td>-->
+                                    <!--<td>状态</td>-->
+                                    <!--<td><button type="button" class="btn btn-danger toggleModel">禁用</button></td>-->
+                                <!--</tr>-->
+                            </tbody>
+                        </table>
+                        <div class="ht_page">
+                            <ul class="pagination"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/html" id="yhTem">
+    {{ each rows }}
+        <tr>
+            <td>{{ $index + 1 + (page - 1) * size }}</td>
+            <td>{{ $value.username }}</td>
+            <td>{{ $value.mobile }}</td>
+            {{ if $value.isDelete == 1 }}
+            <td>正常</td>
+            <td><button data-index="{{ $index }}" data-id="{{ $value.id }}" data-isDelete="{{ $value.isDelete }}" type="button" class="btn btn-danger toggleModel">禁用</button></td>
+            {{ else }}
+            <td>已禁用</td>
+            <td><button data-index="{{ $index }}" data-id="{{ $value.id }}" data-isDelete="{{ $value.isDelete }}" type="button" class="btn btn-primary toggleModel">启用</button></td>
+            {{ /if }}
+        </tr>
+    {{ /each }}
+</script>
+<script src="./assets/jquery/jquery.js"></script>
+<script src="./assets/bootstrap/js/bootstrap.js"></script>
+<script src="./assets/artTemplate/template-web.js"></script>
+<script src="assets/bootstrap-paginator/bootstrap-paginator.min.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/userMan.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+.lt_footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  .mpWidth();
+  height: 50rem / @ltJz;
+  background: @ltColor;
+  z-index: 999;
+  ul{
+    .mpWidth();
+    li{
+      float: left;
+      width: 25%;
+      a{
+        display: block;
+        height: 50rem / @ltJz;
+        color: @ltTextColor;
+        span{
+          display: block;
+          height: 50%;
+          text-align: center;
+          line-height: 1.5;
+          &:first-child{
+            font-size: 18rem / @ltJz;
+          }
+          &:last-child{
+            font-size: 14rem / @ltJz;
+            line-height: 1.2;
+          }
+        }
+      }
+      &.foo_active{
+        a{
+          color: #bb8229;
+        }
+      }
+    }
+  }
+}

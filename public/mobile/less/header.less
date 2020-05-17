@@ -1,0 +1,31 @@
+.lt_header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: @ltColor;
+  .mpWidth();
+  height: 45rem / @ltJz;
+  z-index: 999;
+  h3{
+    color: @ltTextColor;
+    font-size: 16rem / @ltJz;
+    text-align: center;
+    line-height: 45rem / @ltJz;
+    margin: 0;
+  }
+  a{
+    position: absolute;
+    top: 0;
+    width: 45rem / @ltJz;
+    height: 45rem / @ltJz;
+    color: @ltTextColor;
+    text-align: center;
+    line-height: 45rem / @ltJz;
+    &.right{
+      right: 0;
+    }
+    &.left{
+      left: 0;
+    }
+  }
+}

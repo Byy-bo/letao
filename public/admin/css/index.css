@@ -1,0 +1,9 @@
+/*主体内容*/
+.ht_index_tb{
+    width: 45%;
+    height: 400px;
+    float: left;
+}
+.ht_index_tb:first-child{
+    margin-right: 8%;
+}

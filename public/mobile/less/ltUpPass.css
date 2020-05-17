@@ -1,0 +1,234 @@
+@charset "UTF-8";
+/*设备数组*/
+/*设计稿尺寸*/
+/*基准值为*/
+/*主题色*/
+/*主题字色*/
+/*获取数组的长度*/
+/*百分百宽*/
+.mpWidth {
+  width: 100%;
+}
+/*定义函数*/
+/*调用函数*/
+@media screen and (min-width: 320px) {
+  html {
+    font-size: 38.92944039px;
+  }
+}
+@media screen and (min-width: 360px) {
+  html {
+    font-size: 43.79562044px;
+  }
+}
+@media screen and (min-width: 375px) {
+  html {
+    font-size: 45.62043796px;
+  }
+}
+@media screen and (min-width: 380px) {
+  html {
+    font-size: 46.22871046px;
+  }
+}
+@media screen and (min-width: 414px) {
+  html {
+    font-size: 50.3649635px;
+  }
+}
+@media screen and (min-width: 424px) {
+  html {
+    font-size: 51.58150852px;
+  }
+}
+@media screen and (min-width: 480px) {
+  html {
+    font-size: 58.39416058px;
+  }
+}
+@media screen and (min-width: 540px) {
+  html {
+    font-size: 65.69343066px;
+  }
+}
+@media screen and (min-width: 600px) {
+  html {
+    font-size: 72.99270073px;
+  }
+}
+@media screen and (min-width: 640px) {
+  html {
+    font-size: 77.85888078px;
+  }
+}
+@media screen and (min-width: 720px) {
+  html {
+    font-size: 87.59124088px;
+  }
+}
+@media screen and (min-width: 750px) {
+  html {
+    font-size: 91.24087591px;
+  }
+}
+.lt_header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #006699;
+  width: 100%;
+  height: 0.9rem;
+  z-index: 999;
+}
+.lt_header h3 {
+  color: #ffffff;
+  font-size: 0.32rem;
+  text-align: center;
+  line-height: 0.9rem;
+  margin: 0;
+}
+.lt_header a {
+  position: absolute;
+  top: 0;
+  width: 0.9rem;
+  height: 0.9rem;
+  color: #ffffff;
+  text-align: center;
+  line-height: 0.9rem;
+}
+.lt_header a.right {
+  right: 0;
+}
+.lt_header a.left {
+  left: 0;
+}
+.lt_footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1rem;
+  background: #006699;
+  z-index: 999;
+}
+.lt_footer ul {
+  width: 100%;
+}
+.lt_footer ul li {
+  float: left;
+  width: 25%;
+}
+.lt_footer ul li a {
+  display: block;
+  height: 1rem;
+  color: #ffffff;
+}
+.lt_footer ul li a span {
+  display: block;
+  height: 50%;
+  text-align: center;
+  line-height: 1.5;
+}
+.lt_footer ul li a span:first-child {
+  font-size: 0.36rem;
+}
+.lt_footer ul li a span:last-child {
+  font-size: 0.28rem;
+  line-height: 1.2;
+}
+.lt_footer ul li.foo_active a {
+  color: #bb8229;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+body {
+  touch-action: pan-y;
+  font-family: "Microsoft YaHei ", sans-serif;
+  font-size: 14px;
+  color: #333;
+  background: #ffffff;
+}
+a {
+  -webkit-tap-highlight-color: transparent;
+  color: #333;
+  text-decoration: none;
+}
+ul,
+li {
+  list-style-type: none;
+}
+input {
+  outline: none;
+  -webkit-appearance: none;
+}
+img {
+  display: block;
+}
+/*公告版心*/
+.lt_container {
+  width: 100%;
+  height: 100%;
+  max-width: 750px;
+  min-width: 320px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.lt_container .lt_content {
+  width: 100%;
+  height: 100%;
+  padding: 0.9rem 0 1rem;
+}
+.lt_container .lt_content .lt_con_box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.lt_up_pass {
+  width: 100%;
+  padding: 0.2rem;
+}
+.lt_up_pass .mui-input-row:last-child .mui-input-clear {
+  width: 66%;
+}
+.lt_up_pass .mui-input-row:last-child span {
+  z-index: -1;
+}
+.lt_up_pass .mui-input-row:last-child a {
+  display: inline-block;
+  text-align: center;
+  width: 30%;
+  margin-left: 2%;
+  height: 0.8rem;
+  background: #007aff;
+  border-radius: 0.06rem;
+  vertical-align: top;
+  font-size: 0.32rem;
+  line-height: 0.8rem;
+  color: #ffffff;
+}
+.lt_up_pass .mui-input-row:last-child a.a_disabled {
+  background: #999999;
+}
+.lt_up_pass .lt_upPass_qrXg {
+  width: 100%;
+  padding-top: 0.5rem;
+}
+.lt_up_pass .lt_upPass_qrXg a {
+  display: block;
+  height: 0.72rem;
+  color: #ffffff;
+  text-align: center;
+  line-height: 0.72rem;
+  font-size: 0.28rem;
+  background: #007aff;
+  border-radius: 0.06rem;
+}
+/*# sourceMappingURL=ltUpPass.css.map */

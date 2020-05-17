@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+//运动生活
+.lt_ydSh{
+  .mpWidth();
+  padding: 10rem / @ltJz;
+  .lt_ydSh_title{
+    .mpWidth();
+    a{
+      display: block;
+      img{
+        .mpWidth();
+      }
+    }
+  }
+  .lt_ydSh_goods{
+    .mpWidth();
+    padding-top: 5rem / @ltJz;
+    > div{
+      display: block;
+      width: 48%;
+      margin: 0 1% 8rem / @ltJz;
+      box-shadow: 0 0 3px 1px #cccccc;
+      padding: 10rem / @ltJz 0;
+      float: left;
+      background: @ltTextColor;
+      img{
+        .mpWidth();
+      }
+      p{
+        padding: 0 10rem / @ltJz;
+        text-align: center;
+        &:nth-child(2){
+          font-size: 14rem / @ltJz;
+          color: #999999;
+          //.mpWidth();
+          //-webkit-line-clamp: 2;
+          //overflow: hidden;
+          //text-overflow: ellipsis;
+          //display: -webkit-box;
+          //-webkit-box-orient: vertical;
+        }
+        &:nth-child(3){
+          font-size: 12rem / @ltJz;
+          color: red;
+          margin: 15rem / @ltJz 0;
+          span{
+            color: #cccccc;
+            text-decoration: line-through;
+          }
+        }
+      }
+      a{
+        display: block;
+        width: 80rem / @ltJz;
+        height: 30rem / @ltJz;
+        text-align: center;
+        line-height: 30rem / @ltJz;
+        color: @ltTextColor;
+        background: @ltColor;
+        margin: 0 auto;
+        font-size: 14rem / @ltJz;
+      }
+    }
+  }
+}

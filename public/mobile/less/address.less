@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+//收获地址
+.lt_con_box{
+  .lt_add_adr{
+    display: block;
+    font-size: 16rem / @ltJz;
+    height: 30rem / @ltJz;
+    line-height: 30rem / @ltJz;
+    text-align: center;
+    border-bottom: 1rem / @ltJz solid #cacacc;
+  }
+  #OA_task_1{
+    li{
+      > p{
+        text-align: center;
+        padding: 20rem / @ltJz 0;
+      }
+    }
+    .lt_adr_box{
+      a{
+        display: block;
+        font-size: 14rem / @ltJz;
+        position: relative;
+        span{
+          display: block;
+          &:nth-child(2){
+            color: #cccccc;
+          }
+        }
+        i{
+          position: absolute;
+          right: 20rem / @ltJz;
+          top: 50%;
+          transform: translateY(-50%);
+          font-size: 16rem / @ltJz;
+          color: #c3c3c3;
+        }
+      }
+    }
+  }
+}

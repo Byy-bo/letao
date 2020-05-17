@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>后台管理系统--首页</title>
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <!--退出的模态框-->
+    <div id="logOut-modal-sm" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">温馨提示</h4>
+                </div>
+                <div class="media-body">
+                    <p class="text-danger">
+                        <span class="glyphicon glyphicon-info-sign"></span>
+                        您确定要退出后台管理系统吗？
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button id="ht_logOut" type="button" class="btn btn-primary">确认</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--整个大容器-->
+    <div class="ht_box ht_index_box">
+        <div class="container-fluid">
+           <div class="row">
+               <div class="col-xs-2 ht_index_le">
+                   <!--logo文字-->
+                    <div class="ht_index_leTo">
+                        <p>ITCAST</p>
+                    </div>
+                   <!--左侧导航-->
+                    <div class="ht_index_leBo">
+                        <div>
+                            <img src="./images/default.png" alt="">
+                            <span>超级管理员</span>
+                        </div>
+                        <ul>
+                            <li><a href="userMan.html"><span class="glyphicon glyphicon-user"></span> 用户管理</a></li>
+                            <li>
+                                <a class="ht_flGl" href="javascirpt:;"><span class="glyphicon glyphicon-th-list"></span> 分类管理</a>
+                                <ul class="ht_inLeBo_hid">
+                                    <li class=""><a href="first-category.html">一级分类</a></li>
+                                    <li><a href="second-category.html">二级分类</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="javascript:;"><span class="glyphicon glyphicon-tag"></span> 商品管理</a></li>
+                        </ul>
+                    </div>
+               </div>
+               <div class="col-xs-10 ht_index_ri">
+                   <!--上半图标-->
+                   <div class="ht_index_riTo">
+                       <a href="javascript:;" class="glyphicon glyphicon-align-justify ht_nav_flag"></a>
+                       <a  role="button" class="glyphicon glyphicon-log-out" data-toggle="modal" data-target="#logOut-modal-sm"></a>
+                   </div>
+                   <!--下半统计-->
+                   <div class="ht_index_riBo">
+                       <ul class="ht_inRiBo_nav clearfix">
+                           <li><a href="javacript:;">管理系统</a></li>
+                           <li>/</li>
+                           <li><a href="javacript:;">首页</a></li>
+                       </ul>
+                       <div class="clearfix ht_adContent">
+                            <div id="zut" class="ht_index_tb"></div>
+                            <div id="bit" class="ht_index_tb"></div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+        </div>
+    </div>
+<script src="./assets/jquery/jquery.js"></script>
+<script src="./assets/bootstrap/js/bootstrap.js"></script>
+<script src="./assets/echarts/echarts.min.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/index.js"></script>
+</body>
+</html>

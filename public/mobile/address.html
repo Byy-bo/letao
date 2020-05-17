@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <!--在ios中是否运行时创建快捷启动方式-->
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <!--ios设置顶部通知栏的样式 黑色-->
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <!--遇到数字不转化为电话号码的格式-->
+    <meta content="telephone=no" name="format-detection">
+    <!--项目描述-->
+    <meta name="description" content="乐淘是中国最大的正品运动鞋、皮鞋网上专卖。乐淘网经营的品牌包括耐克、阿迪达斯、李宁、匡威等国内外知名品牌的篮球鞋,板鞋,休闲鞋,跑步鞋,帆布...">
+    <meta name="Keywords" content="乐淘 乐淘鞋城 买鞋子 上乐淘 运动鞋 篮球鞋 帆布鞋 跑步鞋 男鞋 女鞋 足球鞋 休闲鞋 凉鞋 户外鞋 布洛克 高跟鞋 单鞋 豆豆鞋 乐福鞋 牛津鞋 凉拖 皮鞋 短靴 长靴 登山鞋 徒步鞋 硫化鞋 训练鞋 溯溪鞋 越野鞋 板鞋 足球鞋 网球鞋 赛车鞋 雪地靴 马丁靴 商务 英伦">
+    <title>收货地址管理</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./res/mui/css/mui.min.css">
+    <link rel="stylesheet" href="./res/fontAwesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./less/ltAddress.less" type="text/less">
+    <script src="./res/less/less.js"></script>
+</head>
+<body>
+<!--版心-->
+<div class="lt_container">
+    <!--头部-->
+    <header class="lt_header">
+        <a href="javascript:;" class="left"><span class="fa fa-arrow-left"></span></a>
+        <h3>收货地址管理</h3>
+    </header>
+
+    <!--内容-->
+    <section class="lt_content">
+        <div class="lt_con_box">
+            <!--区域滚动-->
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <a class="lt_add_adr" href="addAdr.html">添加收货地址</a>
+                    <ul id="OA_task_1" class="mui-table-view">
+                        <!--TODO-->
+                        <!--<li class="mui-table-view-cell mui-transitioning">-->
+                            <!--<div class="mui-slider-right mui-disabled">-->
+                                <!--<a class="mui-btn mui-btn-red" style="transform: translate(0px, 0px);">删除</a>-->
+                            <!--</div>-->
+                            <!--<div class="mui-slider-handle lt_adr_box" style="transform: translate(0px, 0px);">-->
+                                <!--<a href="javascript:;">-->
+                                    <!--<span>邮箱：430200 收货人：李李</span>-->
+                                    <!--<span>湖北省武汉市洪山区创新汇科技园D栋201</span>-->
+                                    <!--<i class="fa fa-angle-right"></i>-->
+                                <!--</a>-->
+                            <!--</div>-->
+                        <!--</li>-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--尾部-->
+    <footer class="lt_footer">
+        <ul class="mui-clearfix">
+            <li>
+                <a href="./index.html">
+                    <span class="fa fa-home"></span>
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="./category.html">
+                    <span class="fa fa-bars"></span>
+                    <span>分类</span>
+                </a>
+            </li>
+            <li>
+                <a href="cart.html">
+                    <span class="fa fa-shopping-cart"></span>
+                    <span>购物车</span>
+                </a>
+            </li>
+            <li class="foo_active">
+                <a href="personal.html">
+                    <span class="fa fa-cog"></span>
+                    <span>会员中心</span>
+                </a>
+            </li>
+        </ul>
+    </footer>
+</div>
+<script type="text/html" id="addressTem">
+    {{ if areR.length }}
+    {{ each areR }}
+        <li class="mui-table-view-cell mui-transitioning">
+            <div class="mui-slider-right mui-disabled">
+                <a data-id="{{ $value.id }}" class="mui-btn mui-btn-red" style="transform: translate(0px, 0px);">删除</a>
+            </div>
+            <div class="mui-slider-handle lt_adr_box" style="transform: translate(0px, 0px);">
+                <a href="addAdr.html?id={{ $value.id}}">
+                    <span>邮箱：{{ $value.postCode }} 收货人：{{ $value.recipients }}</span>
+                    <span>{{ $value.address }}{{ $value.addressDetail }}</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+        </li>
+    {{ /each }}
+    {{ else }}
+    <li><p>当前还没添加收货地址哦！</p></li>
+    {{ /if }}
+</script>
+<script src="./res/zepto/zepto.min.js"></script>
+<script src="./res/zepto/selector.js"></script>
+<script src="./res/artTemplate/template-web.js"></script>
+<script src="./res/mui/js/mui.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/address.js"></script>
+</body>
+</html>

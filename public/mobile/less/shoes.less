@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+//轮播下的鞋分类
+.lt_shoes{
+  .mpWidth();
+  padding: 10rem / @ltJz;
+  ul{
+    .mpWidth();
+    li{
+      width: 33.3%;
+      float: left;
+      &:nth-child(odd){
+        background: @ltColor;
+      }
+      a{
+        display: block;
+        img{
+          .mpWidth();
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+//商品处理
+.lt_con_box{
+  #refreshContainer{
+    padding-bottom: 40rem / @ltJz;
+    .lt_cart_pic{
+      float: left;
+      width: 64rem / @ltJz;
+      text-align: center;
+      margin-right: 16rem / @ltJz;
+      img{
+        .mpWidth();
+        margin-bottom: 5rem / @ltJz;
+      }
+      input{
+        -webkit-appearance: checkbox;
+      }
+    }
+    .mui-media-body{
+      p{
+        font-size: 14rem / @ltJz;
+        &:first-child{
+          color: #666666;
+        }
+        &:nth-child(2){
+          color: #999999;
+          span{
+            &:first-child{
+              color: #ff3300;
+            }
+            &:nth-child(2){
+              font-size: 12rem / @ltJz;
+              color: #cccccc;
+              text-decoration: line-through;
+            }
+            &:last-child{
+              float: right;
+            }
+          }
+        }
+        &:last-child{
+          color: #999999;
+        }
+      }
+    }
+  }
+}

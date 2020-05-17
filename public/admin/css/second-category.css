@@ -1,0 +1,25 @@
+#add_ej_form .form-group{
+    width: 92% !important;
+    margin: 15px 4%;
+}
+#add_ej_form .dropdown-menu{
+    left: 70px;
+    top: unset;
+}
+#add_ej_form #fileupload{
+    width: 82px;
+    height: 34px;
+    position: absolute;
+    opacity: 0;
+}
+.file_img_box{
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+}
+.file_img_box img{
+    width: 100%;
+}
+#ejData td{
+    vertical-align: middle;
+}

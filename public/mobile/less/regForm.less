@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+//注册mui-icon mui-icon-eye
+.lt_reg{
+  .mpWidth();
+  padding: 10rem / @ltJz;
+  #lt_register{
+    .mpWidth();
+    .mui-input-row{
+      &:last-child{
+        .mui-input-clear{
+          width: 66%;
+        }
+        span{
+          z-index: -1;
+        }
+        a{
+          display: inline-block;
+          text-align: center;
+          width: 30%;
+          margin-left: 2%;
+          height: 40rem / @ltJz;
+          background: #007aff;
+          border-radius: 3rem / @ltJz;
+          vertical-align: top;
+          font-size: 16rem / @ltJz;
+          line-height: 40rem / @ltJz;
+          color: @ltTextColor;
+          &.a_disabled{
+            background: #999999;
+          }
+        }
+      }
+    }
+  }
+  > .lt_reg_zc{
+    display: block;
+    height: 36rem / @ltJz;
+    line-height: 36rem / @ltJz;
+    background: #007aff;
+    color: @ltTextColor !important;
+    text-align: center;
+    border-radius: 3rem / @ltJz;
+    margin: 20rem / @ltJz 0;
+  }
+  .lt_reg_ty{
+    .mpWidth();
+    font-size: 14rem / @ltJz;
+    #lt_reg_che{
+      -webkit-appearance: checkbox;
+      vertical-align: middle;
+    }
+    .lt_reg_dl{
+      float: right;
+      color: #007aff;
+    }
+  }
+}

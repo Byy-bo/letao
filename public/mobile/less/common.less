@@ -1,0 +1,58 @@
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body{
+  touch-action: pan-y;
+  font-family: "Microsoft YaHei " , sans-serif;
+  font-size: 14px;
+  color: #333;
+  background: @ltTextColor;
+}
+
+a{
+  -webkit-tap-highlight-color: transparent;
+  color: #333;
+  text-decoration: none;
+}
+
+ul,
+li{
+  list-style-type: none;
+}
+
+input{
+  outline: none;
+  -webkit-appearance: none;
+}
+
+img{
+  display: block;
+}
+
+/*公告版心*/
+.lt_container{
+  .mpWidth();
+  height: 100%;
+  max-width: 750px;
+  min-width: 320px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  .lt_content{
+    .mpWidth();
+    height: 100%;
+    padding: 45rem / @ltJz 0 50rem / @ltJz;
+    .lt_con_box{
+      .mpWidth();
+      height: 100%;
+      position: relative;
+    }
+  }
+}

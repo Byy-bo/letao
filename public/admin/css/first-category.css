@@ -1,0 +1,15 @@
+/*主体内容*/
+#add_yj_form .form-group{
+     width: 92% !important;
+     margin: 15px 4%;
+ }
+#ht_yj_inp{
+    border-radius: 6px;
+    border: 1px solid #cccccc;
+}
+.ht_adContent table tr th:first-child{
+    width: 20%;
+}
+.ht_adContent table tr th:last-child{
+    width: 80%;
+}

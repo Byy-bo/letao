@@ -1,0 +1,48 @@
+/*设备数组*/
+/*设计稿尺寸*/
+/*基准值为*/
+/*主题色*/
+/*主题字色*/
+/*获取数组的长度*/
+/*定义函数*/
+/*调用函数*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+body {
+  touch-action: pan-y;
+  font-family: "Microsoft YaHei ", sans-serif;
+  font-size: 14px;
+  color: #333;
+}
+a {
+  -webkit-tap-highlight-color: transparent;
+  color: #333;
+  text-decoration: none;
+}
+ul,
+li {
+  list-style-type: none;
+}
+input {
+  outline: none;
+  -webkit-appearance: none;
+}
+img {
+  display: block;
+}
+.clearFix::before,
+.clearFix::after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  height: 0;
+  line-height: 0;
+  clear: both;
+}
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,25 @@
+.ht_fixed{
+    background: #222d32;
+}
+.ht_center{
+    margin: 160px 0 0;
+}
+.ht_center h4{
+    text-align: center;
+    color: #ffffff;
+    padding: 20px 0;
+    background: #337ab7;
+    border-radius: 6px 6px 0 0;
+    margin: 0;
+}
+.ht_center .form-horizontal{
+    border-radius: 0 0 6px 6px;
+    background: #ffffff;
+    padding: 15px;
+}
+.ht_center .form-horizontal label{
+    text-align: center;
+}
+.ht_center .form-horizontal .form-group:last-child{
+    text-align: center;
+}

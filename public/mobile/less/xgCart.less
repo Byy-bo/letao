@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+//编辑
+.lt_cart_gm{
+  .mpWidth();
+  > div{
+    &:first-child{
+      span{
+        font-size: 14rem / @ltJz;
+      }
+      a{
+        display: inline-block;
+        font-size: 12rem / @ltJz;
+        padding: 5rem / @ltJz;
+        line-height: 1;
+        margin-bottom: 5rem / @ltJz;
+        border: 1rem / @ltJz solid #cccccc;
+        &.cmActive{
+          background: #ffa500;
+          color: @ltTextColor;
+        }
+      }
+    }
+    &:last-child{
+      span{
+        font-size: 14rem / @ltJz;
+        &:first-child{
+          float: left;
+          height: 36rem / @ltJz;
+          line-height: 36rem / @ltJz;
+        }
+      }
+      div{
+        vertical-align: middle;
+        display: inline-block;
+        input{
+          width: 36rem / @ltJz;
+          height: 36rem / @ltJz;
+          line-height: 1;
+          float: left;
+          padding: 0;
+          margin: 0;
+          text-align: center;
+          font-size: 16rem / @ltJz;
+          border-radius: 0;
+        }
+      }
+    }
+  }
+}
